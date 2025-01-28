@@ -33,7 +33,7 @@ def obter_status_tarefa(nome_tarefa):
     try:
         agendador = win32com.client.Dispatch("Schedule.Service")
         agendador.Connect()
-        pasta_raiz = agendador.GetFolder("\\Teste")  # Caminho fictício
+        pasta_raiz = agendador.GetFolder("\\Caminho Ficticio")  # Caminho fictício
         tarefa = pasta_raiz.GetTask(nome_tarefa)
 
         mapa_status = {
@@ -213,5 +213,5 @@ if __name__ == "__main__":
                 log["proxima_execucao"]
             ])
 
-    id_planilha = "1b8HZ-pA2L2hOXA1CZ_3PsDfi6dJ5FzbRXyjkQndp5DY"
+    id_planilha = "Seu_ID"
     atualizar_planilha_google(id_planilha, dados_para_enviar)
